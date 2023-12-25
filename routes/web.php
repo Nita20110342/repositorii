@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
     // Auth::routes();
@@ -41,5 +41,7 @@ Route::get('/user/delete', [UserController::class, 'delete'])->name('user.delete
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('repository', RepositoryController::class);
+
+Route::resource('repository', RepositoryController::class)->middleware('auth');
+Route::resource('user', UserController::class)->middleware(['auth', 'can:isAdmin']);
 

@@ -35,7 +35,7 @@
             </div>
 
             <div class="form-group">
-              <label for="" class="text-capitalize">years</label>
+              <label for="" class="text-capitalize">year</label>
               <input type="string" name="year" id="" class="form-control @error('year') is-invalid @enderror"
               value="{{ old('year') }}">
               @error('year')
@@ -46,7 +46,7 @@
             </div>
 
             <div class="form-group">
-              <label for="" class="text-capitalize">deskripsi</label>
+              <label for="" class="text-capitalize">description</label>
               <textarea name="description" id="" cols="30" rows="10"
               class="form-control @error('description') is-invalid @enderror" value="{{ old('description') }}"></textarea>
               @error('description')

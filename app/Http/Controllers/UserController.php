@@ -9,7 +9,7 @@ class UserController extends Controller
     public function index ()
     {
         //parsing data
-        $nama = "Hilga Rizky Nugraha";
+        $nama = "Nita";
         $titles = ["staff","kasir"];
         $usia = 20;
         $data = [
